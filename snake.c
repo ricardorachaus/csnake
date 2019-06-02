@@ -145,6 +145,8 @@ int validatePosition(char grid[][columns], Input input, SnakePosition *snake, in
             if (!isValid) return 0;
             newPosition.row = head.row - 1;
             break;
+        default:
+            break;
     }
     isValid = grid[newPosition.row][newPosition.column] != '0';
     hasEatFood = grid[newPosition.row][newPosition.column] == '*';
